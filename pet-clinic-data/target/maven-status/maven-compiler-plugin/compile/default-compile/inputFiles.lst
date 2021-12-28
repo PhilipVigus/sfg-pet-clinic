@@ -1,5 +1,14 @@
+/home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/services/map/OwnerServiceMap.java
+/home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/services/map/AbstractMapService.java
 /home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/model/Pet.java
-/home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/model/PetType.java
-/home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/model/Vet.java
+/home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/services/map/PetServiceMap.java
+/home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/services/map/VetServiceMap.java
+/home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/model/BaseEntity.java
 /home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/model/Person.java
+/home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/services/CrudService.java
+/home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/model/PetType.java
+/home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/services/OwnerService.java
+/home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/services/PetService.java
+/home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/services/VetService.java
+/home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/model/Vet.java
 /home/phil/Projects/Personal/java-projects/sfg-pet-clinic/pet-clinic-data/src/main/java/com/philvigus/sfgpetclinic/model/Owner.java
