@@ -1,13 +1,25 @@
 package com.philvigus.sfgpetclinic.services.map;
 
 import com.philvigus.sfgpetclinic.model.Owner;
+import com.philvigus.sfgpetclinic.model.Pet;
+import com.philvigus.sfgpetclinic.model.PetType;
 import com.philvigus.sfgpetclinic.services.OwnerService;
+import com.philvigus.sfgpetclinic.services.PetService;
+import com.philvigus.sfgpetclinic.services.PetTypeService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
+    private final PetTypeService petTypeService;
+    private final PetService petService;
+
+    public OwnerServiceMap(PetTypeService petTypeService, PetService petService) {
+        this.petTypeService = petTypeService;
+        this.petService = petService;
+    }
+
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -19,13 +31,35 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     }
 
     @Override
-    public Owner save(Owner object) {
-        return super.save(object);
+    public Owner save(Owner owner) {
+        if (owner == null) {
+            return null;
+        }
+
+        if (owner.getPets() != null) {
+            owner.getPets().forEach(pet -> {
+                if (pet.getPetType() == null) {
+                    throw new RuntimeException("Pet Type is required");
+                }
+
+                if (pet.getPetType().getId() == null) {
+                    PetType petType = petTypeService.save(pet.getPetType());
+                    pet.setPetType(petType);
+                }
+
+                if (pet.getId() == null) {
+                    Pet savedPet = petService.save(pet);
+                    pet.setId(savedPet.getId());
+                }
+            });
+        }
+
+        return super.save(owner);
     }
 
     @Override
-    public void delete(Owner object) {
-        super.delete(object);
+    public void delete(Owner owner) {
+        super.delete(owner);
     }
 
     @Override
