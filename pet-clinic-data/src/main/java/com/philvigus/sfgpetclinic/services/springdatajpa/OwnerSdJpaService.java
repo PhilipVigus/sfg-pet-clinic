@@ -35,8 +35,8 @@ public class OwnerSdJpaService implements OwnerService {
     }
 
     @Override
-    public Owner findById(Long aLong) {
-        return ownerRepository.findById(aLong).orElse(null);
+    public Owner findById(Long id) {
+        return ownerRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -50,8 +50,8 @@ public class OwnerSdJpaService implements OwnerService {
     }
 
     @Override
-    public void deleteById(Long aLong) {
-    ownerRepository.deleteById(aLong);
+    public void deleteById(Long id) {
+    ownerRepository.deleteById(id);
     }
 
     @Override
